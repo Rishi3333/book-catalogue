@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalogue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Book Catalogue</h1>
+            <p>Manage your book collection</p>
+        </header>
+
+        <!-- Add/Edit Book Form -->
+        <div class="form-container">
+            <h2 id="form-title">Add New Book</h2>
+            <form id="book-form">
+                <input type="hidden" id="book-id">
+                
+                <div class="form-group">
+                    <label for="title">Title *</label>
+                    <input type="text" id="title" required placeholder="Enter book title">
+                </div>
+
+                <div class="form-group">
+                    <label for="author">Author *</label>
+                    <input type="text" id="author" required placeholder="Enter author name">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="genre">Genre *</label>
+                        <input type="text" id="genre" required placeholder="e.g., Fiction, Mystery">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="year">Year *</label>
+                        <input type="number" id="year" required placeholder="e.g., 2024" min="1000" max="2026">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description (Optional)</label>
+                    <textarea id="description" rows="3" placeholder="Enter book description"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="submit-btn" class="btn btn-primary">Add Book</button>
+                    <button type="button" id="cancel-btn" class="btn btn-secondary" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Books List -->
+        <div class="books-section">
+            <h2>All Books (<span id="book-count">0</span>)</h2>
+            <div id="loading" class="loading">Loading books...</div>
+            <div id="error-message" class="error-message" style="display: none;"></div>
+            <div id="books-container" class="books-grid"></div>
+            <div id="empty-state" class="empty-state" style="display: none;">
+                <p>📖 No books in your catalogue yet.</p>
+                <p>Add your first book using the form above!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
