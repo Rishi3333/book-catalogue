@@ -44,7 +44,8 @@ book-catalogue/
 └── frontend/
     ├── index.html           # Main HTML file
     ├── styles.css           # Styling
-    └── app.js               # Frontend JavaScript logic
+    ├── app.js               # Frontend JavaScript logic
+    └── background.png  ← Your image here
 ```
 
 ## 🚀 Installation & Setup
@@ -160,6 +161,15 @@ app.use(cors({
 }));
 ```
 
+---
+
+## 🖼️ **Adding Your Image:**
+
+1. **Save your image** as `background.png` (or whatever name you prefer)
+2. **Place it in the `frontend` folder** (same folder as `index.html`)
+
+---
+
 ## 🎯 Usage
 
 1. **Add a Book**: Fill in the form at the top with book details and click "Add Book"
@@ -230,10 +240,3 @@ Created as part of the GDP Web Development Workshop - February 2026
 For any questions or issues:
 - Check the troubleshooting section
 - Review the API documentation
-- Reach out to workshop instructors
-
----
-
-**Submission Deadline:** 8th February 2026, 12 PM
-
-Happy Coding! 🚀
