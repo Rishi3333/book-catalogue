@@ -99,7 +99,7 @@ Frontend will automatically start once you run:
 ```bash
 npm start
 ```
-Open your browser and go to 'http://localhost:5000'
+Open your browser and go to `http://localhost:5000`
 
 3. Access the application at `http://localhost:8000`
 
