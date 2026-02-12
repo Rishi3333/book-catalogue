@@ -12,13 +12,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Routes
-app.use('/api/books', bookRoutes);
+// Serve static files from 'public' folder (frontend)
+app.use(express.static('public'));
 
-// Root route
-app.get('/', (req, res) => {
-  res.json({ message: 'Book Catalogue API is running' });
-});
+// API Routes
+app.use('/api/books', bookRoutes);
 
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI)
