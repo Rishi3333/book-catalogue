@@ -32,20 +32,20 @@ A full-stack web application for managing a book collection with CRUD operations
 
 ```
 book-catalogue/
-├── backend/
-│   ├── models/
-│   │   └── Book.js          # Mongoose schema for books
-│   ├── routes/
-│   │   └── books.js         # API routes for CRUD operations
-│   ├── .env                 # Environment variables
-│   ├── package.json         # Backend dependencies
-│   └── server.js            # Express server setup
-│
-└── frontend/
-    ├── index.html           # Main HTML file
-    ├── styles.css           # Styling
-    ├── app.js               # Frontend JavaScript logic
-    └── background.png  ← Your image here
+└── backend/
+    ├── models/
+    │   └── Book.js          # Mongoose schema for books
+    ├── routes/
+    │   └── books.js         # API routes for CRUD operations
+    ├── .env                 # Environment variables
+    ├── public/              ← Frontend files here
+    │   ├── index.html
+    │   ├── styles.css
+    │   ├── app.js
+    │   └── background.png
+    ├── package.json         # Backend dependencies
+    └── server.js            # Express server setup
+
 ```
 
 ## 🚀 Installation & Setup
@@ -95,19 +95,11 @@ The server will run on `http://localhost:5000`
 
 ### Step 3: Setup Frontend
 
-1. Navigate to frontend directory:
+Frontend will automatically start once you run:
 ```bash
-cd ../frontend
+npm start
 ```
-
-2. Open `index.html` in your browser, or use a local server:
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js http-server (install with: npm install -g http-server)
-http-server -p 8000
-```
+Open your browser and go to 'http://localhost:5000'
 
 3. Access the application at `http://localhost:8000`
 
